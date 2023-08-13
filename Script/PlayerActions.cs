@@ -473,14 +473,14 @@ public class PlayerActions : MonoBehaviour
         {
             LeftJoy.IsTilted = true;
 
-            if (InputController.Instance.CurrentControlScheme == ControlSchemes.Keyboard)
+            if (InputHub.Instance.CurrentControlScheme == ControlSchemes.Keyboard)
             {
                 if (LeftJoy.DoubleClickIsPressed)
                 {
                     Vector3 _direction = Vector3.zero;
                     _direction.y = 0;
 
-                    if (InputController.Instance.Player.LeftJoy.IsTilted && (InputController.Instance.Player.LeftJoy.InputZ < 0))
+                    if (InputHub.Instance.Player.LeftJoy.IsTilted && (InputHub.Instance.Player.LeftJoy.InputZ < 0))
                     {
                         // Backpedal override
                         _direction.z = -1;
@@ -522,13 +522,13 @@ public class PlayerActions : MonoBehaviour
 
     private float CheckForSideInput()
     {
-        if (InputController.Instance.Player.TurnLeftIsPressed
-            || InputController.Instance.Player.LeftJoy.InputX < 0)
+        if (InputHub.Instance.Player.TurnLeftIsPressed
+            || InputHub.Instance.Player.LeftJoy.InputX < 0)
         {
             return -1.0f;
         }
-        else if (InputController.Instance.Player.TurnRightIsPressed
-            || InputController.Instance.Player.LeftJoy.InputX > 0)
+        else if (InputHub.Instance.Player.TurnRightIsPressed
+            || InputHub.Instance.Player.LeftJoy.InputX > 0)
         {
             return 1.0f;
         }

@@ -27,9 +27,9 @@ public class RightJoystick
     public float Throttle { get; set; } = 0.0f;
 }
 
-public class InputController : Singleton<InputController>
+public class InputHub : Singleton<InputHub>
 {
-    public InputActions_Catsploration inputActions;
+    public InputActions_ThirdPersonRPG inputActions;
 
     [SerializeField] InputSystemUIInputModule uiInputModule;
     [SerializeField] MenuActions menuActions;
@@ -42,7 +42,7 @@ public class InputController : Singleton<InputController>
 
     private void Start()
     {
-        inputActions = new InputActions_Catsploration();
+        inputActions = new InputActions_ThirdPersonRPG();
         inputActions.Enable();
         PixelCrushers.InputDeviceManager.RegisterInputAction("Interact", inputActions.Player.Action2);
     }
