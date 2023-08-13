@@ -1,2 +1,5 @@
 # com.paul.3rd-person-rpg-input
-This is how I configure New Input for the 3rd person role-playing games that I'm working on.
+
+Using New Input, this is a default configuration for my 3rd person role-playing games. This implementation is designed to to be use with Unity's PlayerInput component.
+
+This package is actively being worked on. Demo scenes, documentation, and prefabs are comming soon!
