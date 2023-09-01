@@ -1,7 +1,7 @@
-using UnityEngine;
-using UnityEngine.InputSystem.UI;
 using Toolbox;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public enum ControlSchemes
 {
@@ -38,8 +38,6 @@ public class InputHub : Singleton<InputHub>
 
     private ControlSchemes currentControlScheme = ControlSchemes.Keyboard;
 
-    // ---- Monobehaviors ---------------------------------------------------------------------
-
     private void Start()
     {
         inputActions = new InputActions_ThirdPersonRPG();
@@ -52,8 +50,6 @@ public class InputHub : Singleton<InputHub>
         menuActions.SetWasPressedThisFrameToFalse();
         playerActions.SetWasPressedThisFrameToFalse();
     }
-
-    // ---- Getters ---------------------------------------------------------------------------
 
     public MenuActions Menu { get { return menuActions; } }
 
@@ -75,9 +71,5 @@ public class InputHub : Singleton<InputHub>
         }
     }
 
-    // ----
 }
-
-
-// ----
 
